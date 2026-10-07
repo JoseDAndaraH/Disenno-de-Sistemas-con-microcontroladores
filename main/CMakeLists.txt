@@ -1,0 +1,29 @@
+idf_component_register(
+    SRCS
+        "mipi_isp_dsi_main.c"
+        "src/wifi_sta.c"
+        "src/http_server.c"
+        "src/jpeg_encoder.c"
+        "src/sobel_gray.c"
+        "src/ppa_gray.c"
+        "src/hough_lines.c"
+    INCLUDE_DIRS
+        "."
+        "components"
+
+    REQUIRES
+        esp_mm
+        esp_driver_isp
+        esp_driver_cam
+        esp_driver_i2c
+        esp_driver_jpeg
+        esp_http_server
+        esp_wifi
+        esp_netif
+        esp_event
+        esp_hosted
+        esp_wifi_remote
+        dsi_init
+        sensor_init
+        esp_driver_ppa
+)
